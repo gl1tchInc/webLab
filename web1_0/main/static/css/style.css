@@ -1,0 +1,145 @@
+@font-face {
+	font-family: 'Antropos'; 
+	src: url(fonts/Antropos  Freefont.ttf); 
+}
+@font-face {
+	font-family: 'LexingtonC'; 
+	src: url(fonts/LexingtonC.ttf); 
+}
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+body{
+
+	background: #EEEADD;
+	font-family: 'Open Sans', sans-serif;
+}
+header{	
+	top:0;
+	position: sticky;
+    padding-right: 100%;
+    background: #7D6412;
+
+}
+.menu{
+	padding: 20px 10px 10px 10px;	
+	justify-content: left;
+	background: #7D6412;
+}
+.mycompany{
+	font-family:'LexingtonC';
+}
+.menu h3{
+	margin-left: 20px;
+}
+.menu ul{
+	list-style: none;
+} 
+.menu li ul{
+list-style: none;  
+display: none;									
+margin: 0; 
+padding: 20px 20px 20px 20px; 
+}
+.menu a{
+	color:#D3A200;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+}
+.menu a:hover{
+	color:#fff;
+}
+.menu ul:hover ul{
+	display: block;
+}
+main{
+	display:flex;
+	flex-direction:column;
+	width: 100%;
+}
+main .main-welcome{
+	text-align:center;
+	padding:50px 0 50px 0;
+}
+main .main-welcome p{
+	color:#999;
+	font-size:20px;
+
+}
+main .main-welcome h1{
+	color:#D3A200;
+	font-size:44px;
+}
+.title{
+	text-align:center;
+	display: flex;
+	margin:50px 0 50px 0;
+}
+.mycompany{	
+  	font-size:60px;
+	color:#EC55BA;
+}
+
+
+.wrapper{
+	width:76%;
+	margin:0 auto;
+	font-family: 'Courier New';
+}
+main .main-about{
+	display:flex;
+	padding:50px 0 50px 0;
+}
+.about-left{
+	margin-left:5px;
+	text-align:justify;
+}
+.about-left h1{
+	display:inline-block;
+	border-bottom: 3px solid #fcac45;
+	padding-bottom: 20px;
+}
+.about-left p{
+	margin:30px 0 50px 0;
+	color:#6c6c6c;
+}
+.about-right img{
+	width: 1000px;
+	height: 500px;
+	transition: 0.5s;
+	transition-timing-function:ease-in;
+}
+.about-right img:hover{
+	transform: scale(0.1);
+}
+#categories{
+}
+.services-cards{
+	text-align:center;
+	display:grid;
+	grid-template-columns:auto auto auto auto;
+	grid-column-gap:20px;
+}
+.services-cards img{
+	width: 70px;
+	height: 100px;
+	border: 3px solid #EC1DDE;
+}
+.services-cardimg{
+	width:100px;
+	height:100px;
+}
+.red{
+	color: red;
+}
+
+footer{
+	width: 100%;
+	height: auto;
+	padding:30px 0 30px 0;
+}

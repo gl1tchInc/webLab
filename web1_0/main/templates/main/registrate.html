@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link href="/static/css/registrate_style.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+
+  <form novalidate>
+
+    <div>
+      <h1>Регистрация</h1>
+      <p>Пожалуйста, заполните эту форму, чтобы создать новый аккаунт</p>
+      <hr>
+        <p>
+            <label for="name">
+              <span><b>Имя пользователя:</b></span>
+              <input type="text" id="name" name="name" placeholder="Введите Имя" required pattern="[А-ЯA-Z]+[a-zа-я]+$">
+              <span class="error" aria-live="polite"></span>
+            </label>
+        </p>
+        <p>
+          <label for="email">
+            <span><b>Электронная почта:</b>:</span>
+            <input type="email" id="email" name="email" required placeholder="Введите адрес электронной почты" pattern="[a-zA-Z0-9@.]+$">
+            <span class="error" aria-live="polite"></span>
+          </label>
+        </p>
+        <p>
+          <label for="password">
+            <span><b>Пароль:</b></span>
+            <input type="password" id="password" name="password" required minlength="8" maxlength="16" placeholder="Введите пароль" pattern="(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9]+$">
+            <span class="error" aria-live="polite"></span>
+          </label>
+        </p>
+      <hr>
+      <button type="submit" class="registerbtn">Регистрация</button>
+    </div>
+  </form>
+  <script src="\static\js\email_validate.js">se</script>
+  <script src="\static\js\name_validate.js"></script>
+  <script src="\static\js\password_validate.js"></script>
+ </body>
+</html>
