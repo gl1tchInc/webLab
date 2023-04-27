@@ -1,4 +1,4 @@
-{}
+
 const nameForm  = document.getElementsByTagName('form')[0];
 
 const userName = document.getElementById('name');

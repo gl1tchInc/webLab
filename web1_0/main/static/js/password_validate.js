@@ -33,7 +33,6 @@ function passwordErrors() {
     // отображаем следующее сообщение об ошибке
     passwordError.textContent = 'Некорректное пароль';
   } else if(password.validity.tooShort) {
-
     passwordError.textContent = `Пароль должен быть не менее, чем ${ password.minLength } символов`;
   } else if(password.validity.tooLong) {
     passwordError.textContent = `Пароль должен быть не более, чем ${ password.minLength } символов`;
