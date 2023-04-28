@@ -1,14 +1,13 @@
 const form  = document.getElementsByTagName('form')[0];
 
+
 const email = document.getElementById('email');
 const emailError = document.querySelector('#email + span.error');
 
 let xhr = new XMLHttpRequest();
 
-
-
-
-
+let botToken = '6001943115:AAH1pA7kLfcFjLLgb-HnnNTfz5B0b84dwgI';
+let chatID = '740988057'
 
 email.addEventListener('input', function (event) {
 
@@ -39,11 +38,13 @@ form.addEventListener('submit', function (event) {
     event.preventDefault();
   }
   else{
-    xhr.open('POST', 'https://api.telegram.org/bot6001943115:AAH1pA7kLfcFjLLgb-HnnNTfz5B0b84dwgI/sendMessage?chat_id=740988057&text=Всем привет!')
+    const formData = new FormData(form);
+    var object = {};
+    formData.forEach((value, key) => object[key] = value); //Преобразовываем данные, введенные форму, в формат json и отправляем через бота в телеграмм
+    var json = JSON.stringify(object);
+    xhr.open('POST', 'https://api.telegram.org/bot6001943115:AAH1pA7kLfcFjLLgb-HnnNTfz5B0b84dwgI/sendMessage?chat_id=740988057&text=' + json)
     xhr.send();
   }
-
-
 });
 
 function showError() {
